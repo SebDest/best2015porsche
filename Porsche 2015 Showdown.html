@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Porsche 2015 Showdown</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: spec-sheet header, three car columns table, bar comparison, verdict */
+:root{
+  --bg:#f3f3f1; --panel:#ffffff; --fg:#17181a; --muted:#62666d; --line:#dcdcd8;
+  --accent:#c8102e; --win:#0f7b4a; --winbg:#e3f3ea; --bar:#2b2f36; --bar-win:#c8102e;
+  --c1:#c8102e; --c2:#1f6fb5; --c3:#b8860b;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121315; --panel:#1b1c1f; --fg:#eeeeec; --muted:#9a9ea6; --line:#2e3035;
+  --accent:#ff4a63; --win:#5fd39a; --winbg:#17301f; --bar:#4a4f58; --bar-win:#ff4a63;
+  --c1:#ff4a63; --c2:#5aa9f0; --c3:#e6b94a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121315; --panel:#1b1c1f; --fg:#eeeeec; --muted:#9a9ea6; --line:#2e3035;
+  --accent:#ff4a63; --win:#5fd39a; --winbg:#17301f; --bar:#4a4f58; --bar-win:#ff4a63;
+  --c1:#ff4a63; --c2:#5aa9f0; --c3:#e6b94a; color-scheme:dark}
+.web{display:grid;gap:20px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:center}
+@media(max-width:700px){.web{grid-template-columns:1fr}}
+.web svg{width:100%;height:auto;max-width:520px;margin:0 auto;display:block}
+.web text{font-family:var(--body);font-size:13px;fill:var(--fg)}
+.web .ring,.web .spoke{fill:none;stroke:var(--line);stroke-width:1}
+.web .ticklab{fill:var(--muted);font-size:10px}
+.legend{display:grid;gap:10px;font-size:14px}
+.legend div{display:flex;align-items:center;gap:10px}
+.sw{width:14px;height:14px;border-radius:2px;flex:none}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-block:32px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:1000px;margin:0 auto;display:grid;gap:32px}
+h1,h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,8vw,72px);line-height:.95;font-weight:700}
+h2{font-size:28px;font-weight:600}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.sub{color:var(--muted);max-width:60ch;margin:12px 0 0}
+.scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-variant-numeric:tabular-nums}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+thead th{font-family:var(--display);font-size:24px;text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--fg)}
+thead th small{display:block;font-family:var(--body);font-size:12px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400}
+tbody th{font-weight:500;color:var(--muted);width:24%}
+td.win{background:var(--winbg);color:var(--win);font-weight:600}
+.bars{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px}
+.card h3{margin:0 0 4px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card p.note{margin:0 0 16px;font-size:12px;color:var(--muted)}
+.row{display:grid;grid-template-columns:90px 1fr 76px;align-items:center;gap:10px;margin:8px 0;font-size:14px}
+.track{height:14px;background:var(--line);border-radius:2px;overflow:hidden}
+.fill{height:100%;background:var(--bar);width:0}
+.fill.best{background:var(--bar-win)}
+.val{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.verdict{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:6px;padding:24px;display:grid;gap:12px}
+.verdict ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.foot{font-size:12px;color:var(--muted)}
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">Model year 2015 · Sport Chrono / Sport Plus</div>
+    <h1>Cayman S vs Macan S vs Cayenne S</h1>
+    <p class="sub">Which of the three S models is the best performer? Specs in metric units, with the Sport Chrono package fitted on all three.</p>
+  </header>
+
+  <section aria-labelledby="t">
+    <h2 id="t" style="margin-bottom:12px">Comparison table</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th></th>
+          <th>Cayman S<small>981 · coupé</small></th>
+          <th>Macan S<small>compact SUV</small></th>
+          <th>Cayenne S<small>large SUV</small></th></tr></thead>
+        <tbody>
+          <tr><th>Engine</th><td>3.4 L flat-6, naturally aspirated</td><td>3.0 L V6 twin-turbo</td><td>3.6 L V6 twin-turbo</td></tr>
+          <tr><th>Power</th><td>239 kW / 325 hp</td><td>250 kW / 340 hp</td><td class="win">309 kW / 420 hp</td></tr>
+          <tr><th>Torque</th><td>370 Nm</td><td>460 Nm</td><td class="win">550 Nm</td></tr>
+          <tr><th>Drive</th><td>RWD, mid-engine</td><td>AWD</td><td>AWD</td></tr>
+          <tr><th>Gearbox</th><td>6MT or 7-speed PDK</td><td>7-speed PDK</td><td>8-speed Tiptronic S</td></tr>
+          <tr><th>Weight (approx.)</th><td class="win">1,360 kg</td><td>1,840 kg</td><td>2,090 kg</td></tr>
+          <tr><th>Power-to-weight</th><td class="win">243 PS/t</td><td>185 PS/t</td><td>201 PS/t</td></tr>
+          <tr><th>0–100 km/h</th><td class="win">4.2 s (PDK)</td><td>5.0 s</td><td>5.1 s</td></tr>
+          <tr><th>Top speed</th><td class="win">277 km/h</td><td>254 km/h</td><td>258 km/h</td></tr>
+          <tr><th>Centre of gravity</th><td class="win">Lowest</td><td>Medium</td><td>Highest</td></tr>
+          <tr><th>Handling and braking</th><td class="win">Best</td><td>Very good for an SUV</td><td>Good for an SUV</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="foot" style="margin-top:8px">Green cells mark the best value in each row. Figures are approximate manufacturer numbers; 0–100 km/h times are converted from 0–60 mph.</p>
+  </section>
+
+  <section aria-labelledby="c">
+    <h2 id="c" style="margin-bottom:12px">At a glance</h2>
+    <div class="bars" id="bars"></div>
+  </section>
+
+  <section aria-labelledby="w">
+    <h2 id="w" style="margin-bottom:12px">Performance web</h2>
+    <div class="card web">
+      <svg id="radar" viewBox="0 0 520 460" role="img" aria-label="Radar chart comparing the three cars on seven performance axes"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+    <p class="foot" style="margin-top:8px">Each axis is scored against the best car (best = 100; centre = 0). Lightness is lowest weight, acceleration is quickest 0–100 km/h. Handling is my qualitative estimate (100 / 80 / 70), not a measured value.</p>
+  </section>
+
+  <section class="verdict" aria-labelledby="v">
+    <h2 id="v">Verdict: the Cayman S is the best performer</h2>
+    <ul>
+      <li><strong>Acceleration:</strong> quickest to 100 km/h despite the least power, because it weighs 480 to 730 kg less than the SUVs.</li>
+      <li><strong>Handling:</strong> the mid-engine layout and low centre of gravity give better cornering, braking and lap times.</li>
+      <li><strong>Top speed:</strong> fastest of the three at about 277 km/h.</li>
+      <li><strong>Cayenne S:</strong> most power and torque, so it is strongest in rolling acceleration and towing, but it is the heaviest.</li>
+      <li><strong>Macan S:</strong> the best balance of sporty and practical, but behind the Cayman S in every performance measure.</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+const cars=['Cayman S','Macan S','Cayenne S'];
+const metrics=[
+  {t:'Power',n:'kW · higher is better',v:[239,250,309],u:'kW',best:'max'},
+  {t:'Torque',n:'Nm · higher is better',v:[370,460,550],u:'Nm',best:'max'},
+  {t:'Weight',n:'kg · lower is better',v:[1360,1840,2090],u:'kg',best:'min'},
+  {t:'Power-to-weight',n:'PS per tonne · higher is better',v:[243,185,201],u:'PS/t',best:'max'},
+  {t:'0–100 km/h',n:'seconds · lower is better',v:[4.2,5.0,5.1],u:'s',best:'min'},
+  {t:'Top speed',n:'km/h · higher is better',v:[277,254,258],u:'km/h',best:'max'}
+];
+const host=document.getElementById('bars');
+metrics.forEach(m=>{
+  const max=Math.max(...m.v), bestV=m.best==='max'?max:Math.min(...m.v);
+  const card=document.createElement('div');card.className='card';
+  card.innerHTML=`<h3>${m.t}</h3><p class="note">${m.n}</p>`+m.v.map((x,i)=>
+    `<div class="row"><span>${cars[i]}</span><div class="track"><div class="fill${x===bestV?' best':''}" data-w="${x/max*100}"></div></div><span class="val">${x} ${m.u}</span></div>`).join('');
+  host.appendChild(card);
+});
+(function(){
+  const ax=[
+    ['Power',[239,250,309],'max'],['Torque',[370,460,550],'max'],['Lightness',[1360,1840,2090],'min'],
+    ['Power-to-weight',[243,185,201],'max'],['Acceleration',[4.2,5.0,5.1],'min'],
+    ['Top speed',[277,254,258],'max'],['Handling',[100,80,70],'max']
+  ];
+  const score=ax.map(a=>a[1].map(v=>a[2]==='max'?v/Math.max(...a[1]):Math.min(...a[1])/v));
+  const cx=260,cy=230,R=165,N=ax.length,ns='http://www.w3.org/2000/svg';
+  const svg=document.getElementById('radar');
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/N;return [cx+Math.cos(a)*R*r,cy+Math.sin(a)*R*r]};
+  const add=(tag,attrs,txt)=>{const e=document.createElementNS(ns,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(txt)e.textContent=txt;svg.appendChild(e);return e};
+  [.25,.5,.75,1].forEach(r=>{
+    add('polygon',{class:'ring',points:ax.map((_,i)=>pt(i,r).join(',')).join(' ')});
+    add('text',{class:'ticklab',x:cx+4,y:cy-R*r-3},Math.round(r*100));
+  });
+  ax.forEach((a,i)=>{
+    const [x,y]=pt(i,1),[lx,ly]=pt(i,1.14);
+    add('line',{class:'spoke',x1:cx,y1:cy,x2:x,y2:y});
+    const anchor=Math.abs(lx-cx)<8?'middle':(lx>cx?'start':'end');
+    add('text',{x:lx,y:ly+4,'text-anchor':anchor},a[0]);
+  });
+  const cols=['var(--c1)','var(--c2)','var(--c3)'];
+  [0,1,2].forEach(c=>{
+    const pts=ax.map((_,i)=>pt(i,score[i][c]));
+    add('polygon',{points:pts.map(p=>p.join(',')).join(' '),fill:cols[c],'fill-opacity':.14,stroke:cols[c],'stroke-width':2.5,'stroke-linejoin':'round'});
+    pts.forEach(p=>add('circle',{cx:p[0],cy:p[1],r:3.5,fill:cols[c]}));
+  });
+  const totals=[0,1,2].map(c=>score.reduce((s,r)=>s+r[c],0)/N*100);
+  document.getElementById('legend').innerHTML=cars.map((n,c)=>
+    `<div><span class="sw" style="background:${cols[c]}"></span><span><strong>${n}</strong><br><span style="color:var(--muted)">Average score ${totals[c].toFixed(0)} / 100</span></span></div>`).join('');
+})();
+requestAnimationFrame(()=>document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%'));
+</script>
+
+</body></html>
